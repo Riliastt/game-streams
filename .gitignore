@@ -5,3 +5,5 @@ dist
 game-streams-yandex.zip
 *.tsbuildinfo
 .cursor
+__pycache__
+*.pyc
