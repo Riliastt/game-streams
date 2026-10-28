@@ -1,7 +1,18 @@
 import { useEffect, useState } from 'react'
 import { gearLevel, visualTier } from '../../game/gear'
 import { useGame } from '../../game/GameContext'
-import { AvatarFace, type AvatarMood } from './AvatarFace'
+import type { AvatarMood } from './AvatarFace'
+
+const CAM_ART: Record<AvatarMood, string> = {
+  idle: './art/streamer_cam.jpg',
+  happy: './art/cam/happy.jpg',
+  hype: './art/cam/hype.jpg',
+  laugh: './art/cam/hype.jpg',
+  shock: './art/cam/shock.jpg',
+  tired: './art/cam/tired.jpg',
+  focus: './art/cam/focus.jpg',
+  talk: './art/cam/talk.jpg',
+}
 
 type Props = { reacting?: boolean }
 
@@ -83,7 +94,7 @@ export function WebcamPanel({ reacting }: Props) {
       className={`webcam-panel live-gif cam-${tier} lights-${lightTier} room-${visualTier(room)} cartoon mood-${mood} ${reacting ? 'reacting' : ''}`}
     >
       <div className="webcam-frame avatar-stage">
-        <AvatarFace mood={mood} reacting={reacting} format={s.contentType} />
+        <img className="webcam-img" src={CAM_ART[mood]} alt="" draggable={false} />
         <div className="webcam-noise" aria-hidden />
         {tier >= 3 && <div className="ring-light ring-pulse" aria-hidden />}
         {sticker && <div className="cam-sticker">{sticker.text}</div>}
