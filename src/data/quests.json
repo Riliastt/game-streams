@@ -1,0 +1,56 @@
+[
+  {
+    "id": "q_streams",
+    "title": "Провести {n} стрим(а)",
+    "metric": "streams",
+    "target": 2,
+    "rewardMoney": 40,
+    "rewardHype": 10,
+    "rewardEnergy": 0
+  },
+  {
+    "id": "q_clicks",
+    "title": "Сделать {n} кликов на стриме",
+    "metric": "clicks",
+    "target": 40,
+    "rewardMoney": 35,
+    "rewardHype": 8,
+    "rewardEnergy": 1
+  },
+  {
+    "id": "q_donate",
+    "title": "Собрать {n}₽ донатов за стримы",
+    "metric": "donations",
+    "target": 40,
+    "rewardMoney": 50,
+    "rewardHype": 5,
+    "rewardEnergy": 0
+  },
+  {
+    "id": "q_subs",
+    "title": "Набрать +{n} подписчиков за день",
+    "metric": "subscribers_gain",
+    "target": 15,
+    "rewardMoney": 45,
+    "rewardHype": 12,
+    "rewardEnergy": 0
+  },
+  {
+    "id": "q_money",
+    "title": "Заработать +{n}₽ за день",
+    "metric": "money_gain",
+    "target": 80,
+    "rewardMoney": 30,
+    "rewardHype": 5,
+    "rewardEnergy": 1
+  },
+  {
+    "id": "q_combo",
+    "title": "Достичь комбо x{n}",
+    "metric": "combo",
+    "target": 10,
+    "rewardMoney": 25,
+    "rewardHype": 15,
+    "rewardEnergy": 0
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "clipmaker",
+    "name": "Клипмейкер",
+    "description": "+бонус к клипам и пассивным подписчикам",
+    "baseCost": 120,
+    "maxLevel": 3,
+    "minRank": 1,
+    "effects": { "clipBonus": 0.12, "passiveSubs": 1 }
+  },
+  {
+    "id": "moderator",
+    "name": "Марина (модер)",
+    "description": "Меньше токсичности и штрафа от хейта",
+    "baseCost": 100,
+    "maxLevel": 3,
+    "minRank": 0,
+    "effects": { "hateResist": 0.25, "toxicityReduce": 0.15 }
+  },
+  {
+    "id": "shorts",
+    "name": "Редактор Shorts",
+    "description": "Быстрее проекты и +хайп",
+    "baseCost": 150,
+    "maxLevel": 3,
+    "minRank": 2,
+    "effects": { "projectSpeed": 0.2, "hypeMult": 0.08 }
+  },
+  {
+    "id": "manager",
+    "name": "Менеджер",
+    "description": "Скидка на апгрейды и пассивные деньги",
+    "baseCost": 200,
+    "maxLevel": 3,
+    "minRank": 2,
+    "effects": { "upgradeDiscount": 0.08, "passiveMoney": 8 }
+  }
+]

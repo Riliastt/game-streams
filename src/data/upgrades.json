@@ -1,0 +1,82 @@
+[
+  {
+    "id": "cam",
+    "name": "Вебкамера",
+    "description": "720p клип → 1080p USB → 4K + ring → mirrorless студия",
+    "baseCost": 35,
+    "maxLevel": 5,
+    "effects": { "viewersMult": 0.06 }
+  },
+  {
+    "id": "mic",
+    "name": "Микрофон",
+    "description": "Гусь → USB + поп-фильтр → XLR студия → SM7B broadcast",
+    "baseCost": 40,
+    "maxLevel": 5,
+    "effects": { "donateMult": 0.15 }
+  },
+  {
+    "id": "lights",
+    "name": "Свет",
+    "description": "Темнота на вебе → лампа → софтбокс, +хайп",
+    "baseCost": 50,
+    "maxLevel": 5,
+    "effects": { "hypeMult": 0.06 }
+  },
+  {
+    "id": "pc",
+    "name": "ПК",
+    "description": "Дешёвый пластик → slim Alu → premium → titanium OLED",
+    "baseCost": 80,
+    "maxLevel": 8,
+    "effects": { "clickPower": 0.55 }
+  },
+  {
+    "id": "software",
+    "name": "Софт",
+    "description": "+8% к подписчикам после стрима",
+    "baseCost": 70,
+    "maxLevel": 5,
+    "effects": { "subsMult": 0.045 }
+  },
+  {
+    "id": "room",
+    "name": "Комната",
+    "description": "ДСП царапины → ламинат → массив → walnut luxury",
+    "baseCost": 120,
+    "maxLevel": 5,
+    "effects": { "maxEnergy": 1 }
+  },
+  {
+    "id": "moderator",
+    "name": "Модератор",
+    "description": "Меньше штрафа от хейта",
+    "baseCost": 150,
+    "maxLevel": 3,
+    "effects": { "hateResist": 0.2 }
+  },
+  {
+    "id": "editor",
+    "name": "Редактор",
+    "description": "+12% денег после стрима",
+    "baseCost": 200,
+    "maxLevel": 4,
+    "effects": { "moneyMult": 0.12 }
+  },
+  {
+    "id": "chair",
+    "name": "Кресло",
+    "description": "−10% усталости за клик",
+    "baseCost": 60,
+    "maxLevel": 3,
+    "effects": { "fatigueReduce": 0.1 }
+  },
+  {
+    "id": "snack",
+    "name": "Снеки",
+    "description": "+5% к комбо-окну",
+    "baseCost": 45,
+    "maxLevel": 4,
+    "effects": { "comboBonus": 0.05 }
+  }
+]

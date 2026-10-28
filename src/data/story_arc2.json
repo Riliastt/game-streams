@@ -1,0 +1,254 @@
+{
+  "scenes": [
+    {
+      "id": "arc2_start",
+      "trigger": { "type": "custom", "id": "arc2_ready" },
+      "portrait": "luch",
+      "speaker": "Луч",
+      "text": "Арка один позади. Я — Луч, продюсер. Хочешь агентство и масштаб или свободу автора?",
+      "choices": [
+        {
+          "id": "a2_agency",
+          "label": "Агентство и рост",
+          "effects": { "flags": ["arc2_started", "path_agency"], "money": 100, "subscribers": 40 }
+        },
+        {
+          "id": "a2_indie",
+          "label": "Свобода автора",
+          "effects": { "flags": ["arc2_started", "path_indie"], "reputation": 5, "hype": 20 }
+        }
+      ]
+    },
+    {
+      "id": "arc2_marina",
+      "trigger": { "type": "flags", "all": ["arc2_started"] },
+      "portrait": "marina",
+      "speaker": "Марина",
+      "text": "Чат стал жёстче. Дать мне больше прав на баны или оставим «свободный эфир»?",
+      "choices": [
+        {
+          "id": "a2_mod_strict",
+          "label": "Строгая модерация",
+          "effects": { "flags": ["mod_strict"], "reputation": 3 }
+        },
+        {
+          "id": "a2_mod_free",
+          "label": "Свободный эфир",
+          "effects": { "flags": ["mod_free"], "hype": 25, "reputation": -2 }
+        }
+      ]
+    },
+    {
+      "id": "arc2_volt",
+      "trigger": { "type": "subscribers", "min": 450 },
+      "portrait": "volt",
+      "speaker": "Volt Energy",
+      "text": "Большой контракт на сезон. Но контракт душит формат. Берём?",
+      "choices": [
+        {
+          "id": "a2_volt_yes",
+          "label": "Подписать",
+          "effects": { "flags": ["volt_deal"], "money": 400, "reputation": -4 }
+        },
+        {
+          "id": "a2_volt_no",
+          "label": "Отказать",
+          "effects": { "flags": ["volt_refuse"], "reputation": 6 }
+        },
+        {
+          "id": "a2_volt_mid",
+          "label": "Только пару интеграций",
+          "effects": { "flags": ["volt_soft"], "money": 180, "reputation": 1 }
+        }
+      ]
+    },
+    {
+      "id": "arc2_cancel",
+      "trigger": { "type": "custom", "id": "high_toxicity" },
+      "portrait": "hater",
+      "speaker": "Отмена?",
+      "text": "Клип с вашим срывом гуляет по тредам. Как ответим?",
+      "choices": [
+        {
+          "id": "a2_apologize",
+          "label": "Извиниться в эфире",
+          "effects": { "flags": ["arc2_apology"], "reputation": 8, "subscribers": -20 }
+        },
+        {
+          "id": "a2_double_down",
+          "label": "Удвоить хайп",
+          "effects": { "flags": ["arc2_chaos"], "hype": 40, "reputation": -8, "subscribers": 30 }
+        }
+      ]
+    },
+    {
+      "id": "arc2_burnout",
+      "trigger": { "type": "custom", "id": "high_burnout" },
+      "portrait": "you",
+      "speaker": "Вы",
+      "text": "Руки трясутся. Луч пишет «ещё один марафон». Тело говорит «стоп».",
+      "choices": [
+        {
+          "id": "a2_break",
+          "label": "Взять паузу",
+          "effects": { "flags": ["arc2_rest"], "energy": 3, "reputation": 2 }
+        },
+        {
+          "id": "a2_marathon",
+          "label": "Марафон ради цифр",
+          "effects": { "flags": ["arc2_grind"], "money": 120, "subscribers": 50 }
+        }
+      ]
+    },
+    {
+      "id": "arc2_nexus",
+      "trigger": { "type": "subscribers", "min": 550 },
+      "portrait": "nexus",
+      "speaker": "Nexus",
+      "text": "Большой коллаб. Можем взорвать алгоритм — или утонуть в чужом стиле.",
+      "choices": [
+        {
+          "id": "a2_nexus_yes",
+          "label": "Коллабим по-крупному",
+          "effects": { "flags": ["nexus_collab"], "subscribers": 80, "hype": 35 }
+        },
+        {
+          "id": "a2_nexus_soft",
+          "label": "Короткий совместный эфир",
+          "effects": { "flags": ["nexus_soft"], "subscribers": 35, "reputation": 2 }
+        },
+        {
+          "id": "a2_nexus_no",
+          "label": "Остаёмся соло",
+          "effects": { "flags": ["nexus_solo"], "reputation": 3 }
+        }
+      ]
+    },
+    {
+      "id": "arc2_luch_pressure",
+      "trigger": { "type": "flags", "all": ["path_agency"] },
+      "portrait": "luch",
+      "speaker": "Луч",
+      "text": "Агентство требует еженедельный контент-план. Ты лидер или контент-машина?",
+      "choices": [
+        {
+          "id": "a2_machine",
+          "label": "Машина хайпа",
+          "effects": { "flags": ["machine_path"], "hype": 30, "subscribers": 40 }
+        },
+        {
+          "id": "a2_leader",
+          "label": "Лидер комьюнити",
+          "effects": { "flags": ["leader_path"], "reputation": 7 }
+        }
+      ]
+    },
+    {
+      "id": "arc2_indie_doubt",
+      "trigger": { "type": "flags", "all": ["path_indie"] },
+      "portrait": "friend",
+      "speaker": "Друг",
+      "text": "Без агентства медленнее. Не жалеешь?",
+      "choices": [
+        {
+          "id": "a2_no_regret",
+          "label": "Это мой темп",
+          "effects": { "flags": ["indie_sure"], "reputation": 4 }
+        },
+        {
+          "id": "a2_maybe_agency",
+          "label": "Может, стоило…",
+          "effects": { "flags": ["indie_doubt"], "hype": 10 }
+        }
+      ]
+    },
+    {
+      "id": "arc2_marina_bond",
+      "trigger": { "type": "flags", "all": ["mod_strict"] },
+      "portrait": "marina",
+      "speaker": "Марина",
+      "text": "Чат стал добрее. Спасибо, что доверил. Держим курс?",
+      "choices": [
+        {
+          "id": "a2_keep_mod",
+          "label": "Держим",
+          "effects": { "flags": ["marina_bond"], "reputation": 3 }
+        }
+      ]
+    },
+    {
+      "id": "arc2_mid_offer",
+      "trigger": { "type": "money", "min": 500 },
+      "portrait": "volt",
+      "speaker": "Volt",
+      "text": "Можем покрасить студию в наши цвета. Косметика + деньги. Идёте?",
+      "choices": [
+        {
+          "id": "a2_theme_volt",
+          "label": "Взять тему Volt",
+          "effects": { "flags": ["theme_volt_unlock"], "money": 80 }
+        },
+        {
+          "id": "a2_theme_no",
+          "label": "Свой стиль",
+          "effects": { "flags": ["theme_own"], "reputation": 2 }
+        }
+      ]
+    },
+    {
+      "id": "arc2_ending_main",
+      "trigger": { "type": "subscribers", "min": 800 },
+      "portrait": "you",
+      "speaker": "Финал арки 2",
+      "text": "Канал на новой высоте. Кем вы останетесь в истории стримов?",
+      "choices": [
+        {
+          "id": "end2_empire",
+          "label": "Империя хайпа",
+          "effects": { "flags": ["ending_empire"], "hype": 60, "money": 200 },
+          "requires": { "anyFlags": ["machine_path", "volt_deal", "arc2_chaos", "nexus_collab", "path_agency"] }
+        },
+        {
+          "id": "end2_creator",
+          "label": "Авторский канал",
+          "effects": { "flags": ["ending_auteur"], "reputation": 15 },
+          "requires": { "anyFlags": ["path_indie", "leader_path", "volt_refuse", "arc2_rest", "marina_bond"] }
+        },
+        {
+          "id": "end2_balance",
+          "label": "Устойчивый бренд",
+          "effects": { "flags": ["ending_stable"], "money": 150, "reputation": 8 },
+          "requires": { "anyFlags": ["volt_soft", "nexus_soft", "indie_sure", "arc2_apology", "mod_strict"] }
+        }
+      ]
+    },
+    {
+      "id": "arc2_ending_fallback",
+      "trigger": { "type": "subscribers", "min": 800 },
+      "portrait": "luch",
+      "speaker": "Эпилог",
+      "text": "Цифры есть, путь ещё пишется. Эфир продолжается.",
+      "choices": [
+        {
+          "id": "end2_continue",
+          "label": "Продолжить расти",
+          "effects": { "flags": ["ending_arc2_continue"], "money": 100, "subscribers": 20 }
+        }
+      ]
+    },
+    {
+      "id": "arc2_epilogue",
+      "trigger": { "type": "custom", "id": "arc2_ended" },
+      "portrait": "you",
+      "speaker": "Титры",
+      "text": "Спасибо за эфир. Студия ваша — стройте дальше, клипайте, не сгорайте.",
+      "choices": [
+        {
+          "id": "epi_ok",
+          "label": "В студию",
+          "effects": { "flags": ["epilogue_seen"], "energy": 1 }
+        }
+      ]
+    }
+  ]
+}

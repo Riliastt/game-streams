@@ -1,0 +1,225 @@
+{
+  "scenes": [
+    {
+      "id": "intro",
+      "trigger": { "type": "start" },
+      "portrait": "you",
+      "speaker": "Вы",
+      "text": "Старый ноут, дешёвый микрофон и мечта. Сегодня — первый стрим. Готовы?",
+      "choices": [
+        {
+          "id": "intro_go",
+          "label": "Поехали!",
+          "effects": { "flags": ["started"], "reputation": 1 }
+        }
+      ]
+    },
+    {
+      "id": "first_chat",
+      "trigger": { "type": "streams", "min": 1 },
+      "portrait": "viewer",
+      "speaker": "Первый зритель",
+      "text": "Йо, вижу тебя впервые. Что за контент будет?",
+      "choices": [
+        {
+          "id": "chat_games",
+          "label": "Игры и вайб",
+          "effects": { "flags": ["path_games"], "hype": 5 }
+        },
+        {
+          "id": "chat_talk",
+          "label": "Просто поболтать",
+          "effects": { "flags": ["path_talk"], "reputation": 2 }
+        }
+      ]
+    },
+    {
+      "id": "viral_hint",
+      "trigger": { "type": "subscribers", "min": 25 },
+      "portrait": "friend",
+      "speaker": "Друг",
+      "text": "Клип с твоей ржаки залетел в рекомендациях. Будешь пушить хайп или спокойно расти?",
+      "choices": [
+        {
+          "id": "viral_push",
+          "label": "Пушим хайп",
+          "effects": { "flags": ["viral_push"], "subscribers": 15, "reputation": -1 }
+        },
+        {
+          "id": "viral_calm",
+          "label": "Растим спокойно",
+          "effects": { "flags": ["viral_calm"], "reputation": 3, "money": 20 }
+        }
+      ]
+    },
+    {
+      "id": "brand_offer",
+      "trigger": { "type": "subscribers", "min": 80 },
+      "portrait": "brand",
+      "speaker": "Менеджер бренда",
+      "text": "Хотим интеграцию энергетиков. Деньги хорошие, но аудитория может захейтить.",
+      "choices": [
+        {
+          "id": "brand_yes",
+          "label": "Согласиться",
+          "effects": { "flags": ["brand_deal"], "money": 200, "reputation": -3 }
+        },
+        {
+          "id": "brand_no",
+          "label": "Отказаться",
+          "effects": { "flags": ["brand_refuse"], "reputation": 4 }
+        },
+        {
+          "id": "brand_soft",
+          "label": "Только честный отзыв",
+          "effects": { "flags": ["brand_soft"], "money": 80, "reputation": 1 }
+        }
+      ]
+    },
+    {
+      "id": "hate_wave",
+      "trigger": { "type": "flags", "all": ["brand_deal"] },
+      "portrait": "hater",
+      "speaker": "Чат",
+      "text": "Продался! Что ответишь хейту?",
+      "choices": [
+        {
+          "id": "hate_ignore",
+          "label": "Игнор и модерация",
+          "effects": { "flags": ["handled_hate"], "reputation": 1 }
+        },
+        {
+          "id": "hate_fight",
+          "label": "Ответить жёстко",
+          "effects": { "flags": ["drama"], "hype": 20, "reputation": -4 }
+        }
+      ]
+    },
+    {
+      "id": "collab_invite",
+      "trigger": { "type": "subscribers", "min": 150 },
+      "portrait": "collab",
+      "speaker": "Другой стример",
+      "text": "Давай коллаб. Можем взорвать чат или всё провалить вдвоём.",
+      "choices": [
+        {
+          "id": "collab_yes",
+          "label": "Коллабим!",
+          "effects": { "flags": ["collab"], "subscribers": 40, "hype": 15 }
+        },
+        {
+          "id": "collab_no",
+          "label": "Пока соло",
+          "effects": { "flags": ["solo_focus"], "reputation": 2 }
+        }
+      ]
+    },
+    {
+      "id": "burnout",
+      "trigger": { "type": "streams", "min": 8 },
+      "portrait": "you",
+      "speaker": "Вы",
+      "text": "Голова гудит. Можно взять паузу или гнать дальше ради цифр.",
+      "choices": [
+        {
+          "id": "burn_rest",
+          "label": "Отдохнуть (+энергия)",
+          "effects": { "flags": ["rested"], "energy": 3, "reputation": 1 }
+        },
+        {
+          "id": "burn_grind",
+          "label": "Гриндим дальше",
+          "effects": { "flags": ["grind"], "money": 50, "energy": -1, "reputation": -1 }
+        }
+      ]
+    },
+    {
+      "id": "scandal",
+      "trigger": { "type": "flags", "all": ["drama"] },
+      "portrait": "news",
+      "speaker": "Треды",
+      "text": "Клип с вашим ответом чату разнесло. Репутация на кону.",
+      "choices": [
+        {
+          "id": "scandal_apology",
+          "label": "Извиниться",
+          "effects": { "flags": ["apologized"], "reputation": 5, "subscribers": -10 }
+        },
+        {
+          "id": "scandal_double",
+          "label": "Удвоить ставки",
+          "effects": { "flags": ["chaos_arc"], "hype": 30, "reputation": -5, "subscribers": 25 }
+        }
+      ]
+    },
+    {
+      "id": "ending_creator",
+      "trigger": { "type": "subscribers", "min": 300 },
+      "portrait": "you",
+      "speaker": "Финал арки",
+      "text": "Канал вырос. Какой путь закрепим как ваш стиль?",
+      "choices": [
+        {
+          "id": "end_community",
+          "label": "Комьюнити и вайб",
+          "effects": { "flags": ["ending_community"], "reputation": 10 },
+          "requires": { "anyFlags": ["viral_calm", "brand_refuse", "rested", "solo_focus", "apologized"] }
+        },
+        {
+          "id": "end_hype",
+          "label": "Хайп любой ценой",
+          "effects": { "flags": ["ending_hype"], "hype": 50 },
+          "requires": { "anyFlags": ["viral_push", "brand_deal", "drama", "chaos_arc", "grind"] }
+        },
+        {
+          "id": "end_balance",
+          "label": "Баланс и бренд",
+          "effects": { "flags": ["ending_balance"], "money": 150, "reputation": 5 },
+          "requires": { "anyFlags": ["brand_soft", "collab", "path_games", "path_talk"] }
+        }
+      ]
+    },
+    {
+      "id": "ending_fallback",
+      "trigger": { "type": "subscribers", "min": 300 },
+      "portrait": "you",
+      "speaker": "Финал",
+      "text": "Вы дошли до серьёзной отметки. История канала только начинается.",
+      "choices": [
+        {
+          "id": "end_continue",
+          "label": "Продолжить расти",
+          "effects": { "flags": ["ending_continue"], "money": 100 }
+        }
+      ]
+    },
+    {
+      "id": "mid_tip",
+      "trigger": { "type": "money", "min": 100 },
+      "portrait": "friend",
+      "speaker": "Друг",
+      "text": "С деньгами проще апгрейдить студию. Не забудь про свет и звук — чат это слышит.",
+      "choices": [
+        {
+          "id": "tip_ok",
+          "label": "Учту",
+          "effects": { "flags": ["got_tip"] }
+        }
+      ]
+    },
+    {
+      "id": "energy_low",
+      "trigger": { "type": "custom", "id": "low_energy_once" },
+      "portrait": "you",
+      "speaker": "Вы",
+      "text": "Энергии почти нет. Можно посмотреть рекламу за зарядку или лечь спать до завтра.",
+      "choices": [
+        {
+          "id": "energy_note",
+          "label": "Понял",
+          "effects": { "flags": ["energy_warned"] }
+        }
+      ]
+    }
+  ]
+}

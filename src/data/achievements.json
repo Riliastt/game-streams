@@ -1,0 +1,16 @@
+[
+  { "id": "ach_first_stream", "title": "Первый эфир", "description": "Завершите первый стрим", "check": "streams>=1" },
+  { "id": "ach_subs_50", "title": "Микро-канал", "description": "50 подписчиков", "check": "subscribers>=50" },
+  { "id": "ach_subs_100", "title": "Сотня", "description": "100 подписчиков", "check": "subscribers>=100" },
+  { "id": "ach_subs_300", "title": "Растущая звезда", "description": "300 подписчиков", "check": "subscribers>=300" },
+  { "id": "ach_subs_500", "title": "Полтысячи", "description": "500 подписчиков", "check": "subscribers>=500" },
+  { "id": "ach_combo_15", "title": "В потоке", "description": "Комбо x15", "check": "bestCombo>=15" },
+  { "id": "ach_brand_refuse", "title": "Принципы", "description": "Откажитесь от сомнительного бренда", "check": "flag:brand_refuse" },
+  { "id": "ach_collab", "title": "Не один", "description": "Согласитесь на коллаб", "check": "flag:collab" },
+  { "id": "ach_staff", "title": "Есть команда", "description": "Наймите первого сотрудника", "check": "staffAny" },
+  { "id": "ach_clip", "title": "Клипмейкер", "description": "Завершите проект клипа", "check": "flag:clip_done" },
+  { "id": "ach_named", "title": "Бренд", "description": "Назовите канал", "check": "channelNamed" },
+  { "id": "ach_ending", "title": "Конец арки 1", "description": "Получите первую концовку", "check": "hasEnding" },
+  { "id": "ach_arc2", "title": "Вторая волна", "description": "Начните арку 2", "check": "flag:arc2_started" },
+  { "id": "ach_rest", "title": "Без выгорания", "description": "Отдохните в сцене выгорания", "check": "flag:rested" }
+]

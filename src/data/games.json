@@ -1,0 +1,90 @@
+[
+  {
+    "id": "block_realm",
+    "name": "Block Realm",
+    "tagline": "Кубики, крафт и ночные криперы",
+    "price": 0,
+    "theme": "blocks",
+    "color": "#5B8C3E",
+    "avatar": "./art/avatar_block_realm.jpg",
+    "mods": { "viewers": 1, "donate": 1, "hype": 1, "fatigue": 1, "combo": 1 },
+    "toxicityRisk": 0
+  },
+  {
+    "id": "ancient_lanes",
+    "name": "Ancient Lanes",
+    "tagline": "Пять героев, одна древняя",
+    "price": 85,
+    "theme": "lanes",
+    "color": "#C23B2A",
+    "avatar": "./art/avatar_ancient_lanes.jpg",
+    "mods": { "viewers": 1.12, "donate": 1.05, "hype": 1.18, "fatigue": 1.2, "combo": 1.08 },
+    "toxicityRisk": 0.08
+  },
+  {
+    "id": "dust_tactics",
+    "name": "Dust Tactics",
+    "tagline": "Раунд за раундом на пыльной карте",
+    "price": 65,
+    "theme": "tactics",
+    "color": "#D4A017",
+    "avatar": "./art/avatar_dust_tactics.jpg",
+    "mods": { "viewers": 1.05, "donate": 0.95, "hype": 1.1, "fatigue": 1.15, "combo": 1.12 },
+    "toxicityRisk": 0.06
+  },
+  {
+    "id": "neon_crime",
+    "name": "Neon Crime",
+    "tagline": "Город, тачки и хаос на закате",
+    "price": 110,
+    "theme": "crime",
+    "color": "#E85D4C",
+    "avatar": "./art/avatar_neon_crime.jpg",
+    "mods": { "viewers": 1.15, "donate": 1.2, "hype": 1.1, "fatigue": 1.1, "combo": 1 },
+    "toxicityRisk": 0.1
+  },
+  {
+    "id": "storm_build",
+    "name": "Storm Build",
+    "tagline": "Зона сжимается — строй быстрее",
+    "price": 130,
+    "theme": "storm",
+    "color": "#6C5CE7",
+    "avatar": "./art/avatar_storm_build.jpg",
+    "mods": { "viewers": 1.2, "donate": 1, "hype": 1.22, "fatigue": 1.18, "combo": 1.05 },
+    "toxicityRisk": 0.05
+  },
+  {
+    "id": "spike_ops",
+    "name": "Spike Ops",
+    "tagline": "Агенты, скиллы и точка",
+    "price": 95,
+    "theme": "agents",
+    "color": "#FF4655",
+    "avatar": "./art/avatar_spike_ops.jpg",
+    "mods": { "viewers": 1.08, "donate": 1.05, "hype": 1.15, "fatigue": 1.12, "combo": 1.2 },
+    "toxicityRisk": 0.04
+  },
+  {
+    "id": "brick_verse",
+    "name": "Brick Verse",
+    "tagline": "Миры из кубиков и мини-игры",
+    "price": 45,
+    "theme": "bricks",
+    "color": "#00A2FF",
+    "avatar": "./art/avatar_brick_verse.jpg",
+    "mods": { "viewers": 1.05, "donate": 1.1, "hype": 0.95, "fatigue": 0.9, "combo": 1 },
+    "toxicityRisk": 0
+  },
+  {
+    "id": "lane_legends",
+    "name": "Lane Legends",
+    "tagline": "Ульты, драконы и тимфайт",
+    "price": 120,
+    "theme": "legends",
+    "color": "#0AC8B9",
+    "avatar": "./art/avatar_lane_legends.jpg",
+    "mods": { "viewers": 1.14, "donate": 1.08, "hype": 1.16, "fatigue": 1.15, "combo": 1.1 },
+    "toxicityRisk": 0.07
+  }
+]
